@@ -60,7 +60,7 @@ public:
         return hash.finished();
     }
 
-    ref const(Vector!ubyte) getContents() const
+    ref const(Vector!ubyte) getContents() const return
     { return m_data; }
 
 	void reset() { if (m_data.length == 0) m_data.reserve(2048); else m_data.clear(); }

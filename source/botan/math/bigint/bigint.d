@@ -104,7 +104,7 @@ public:
     }
 
     /// Move constructor
-    ref BigInt opAssign(size_t other) const
+    ref BigInt opAssign(size_t other) const return
     {
         (cast(BigInt*)&this).swap(other);
         

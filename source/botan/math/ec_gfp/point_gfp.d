@@ -88,7 +88,7 @@ public:
     /**
     * Move Assignment
     */
-    ref PointGFp opAssign(PointGFp* other)
+    ref PointGFp opAssign(PointGFp* other) return
     {
         swap(other);
         return this;
@@ -285,7 +285,7 @@ public:
     * Return base curve of this point
     * Returns: the curve over GF(p) of this point
     */
-    ref const(CurveGFp) getCurve() const { return m_curve; }
+    ref const(CurveGFp) getCurve() const return { return m_curve; }
 
     /**
     * get affine x coordinate
@@ -701,7 +701,7 @@ public:
     CurveGFp m_curve;
     BigInt m_coord_x, m_coord_y, m_coord_z;
     SecureVector!word m_ws; // workspace for Montgomery
-    @property ref SecureVector!word m_ws_ref() { return m_ws; }
+    @property ref SecureVector!word m_ws_ref() return { return m_ws; }
     @property SecureVector!word m_ws_const() const { return m_ws.dup; }
     alias mutable = SecureVector!word*;
 }

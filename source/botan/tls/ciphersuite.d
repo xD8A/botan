@@ -476,24 +476,24 @@ public:
     /**
     * Returns: key exchange algorithm used by this ciphersuite
     */
-    ref const(string) kexAlgo() const { return m_kex_algo; }
+    ref const(string) kexAlgo() const return { return m_kex_algo; }
 
     /**
     * Returns: signature algorithm used by this ciphersuite
     */
-    ref const(string) sigAlgo() const { return m_sig_algo; }
+    ref const(string) sigAlgo() const return { return m_sig_algo; }
 
     /**
     * Returns: symmetric cipher algorithm used by this ciphersuite
     */
-    ref const(string) cipherAlgo() const { return m_cipher_algo; }
+    ref const(string) cipherAlgo() const return { return m_cipher_algo; }
 
     /**
     * Returns: message authentication algorithm used by this ciphersuite
     */
-    ref const(string) macAlgo() const { return m_mac_algo; }
+    ref const(string) macAlgo() const return { return m_mac_algo; }
 
-    ref const(string) prfAlgo() const
+    ref const(string) prfAlgo() const return
     {
         return (m_prf_algo != "") ? m_prf_algo : m_mac_algo;
     }

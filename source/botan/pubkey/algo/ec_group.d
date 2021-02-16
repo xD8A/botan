@@ -234,25 +234,25 @@ public:
     * Return domain parameter curve
     * Returns: domain parameter curve
     */
-    ref const(CurveGFp) getCurve() const { return m_curve; }
+    ref const(CurveGFp) getCurve() const return { return m_curve; }
 
     /**
     * Return domain parameter curve
     * Returns: domain parameter curve
     */
-    ref const(PointGFp) getBasePoint() const { return m_base_point; }
+    ref const(PointGFp) getBasePoint() const return { return m_base_point; }
 
     /**
     * Return the order of the base point
     * Returns: order of the base point
     */
-    ref const(BigInt) getOrder() const { return m_order; }
+    ref const(BigInt) getOrder() const return { return m_order; }
 
     /**
     * Return the cofactor
     * Returns: the cofactor
     */
-    ref const(BigInt) getCofactor() const { return m_cofactor; }
+    ref const(BigInt) getCofactor() const return { return m_cofactor; }
 
     bool initialized() const { return !m_base_point.isZero(); }
 

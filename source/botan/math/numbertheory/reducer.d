@@ -24,7 +24,7 @@ import std.traits : isPointer;
 struct ModularReducer
 {
 public:
-    ref const(BigInt) getModulus() const { return m_modulus; }
+    ref const(BigInt) getModulus() const return { return m_modulus; }
 
     /*
     * Barrett Reduction
