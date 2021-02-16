@@ -229,7 +229,7 @@ public:
     /**
     * Move assignment
     */
-    void opAssign(const BigInt other) nothrow
+    void opAssign(in BigInt other) nothrow
     {
 		this.swap(cast(BigInt*)&other);
     }
